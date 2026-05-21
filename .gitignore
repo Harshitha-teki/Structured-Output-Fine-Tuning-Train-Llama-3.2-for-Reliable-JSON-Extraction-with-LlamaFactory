@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+env/
+
+# OS files
+.DS_Store
+
+# Archives and backups
+*.zip
+*.tar.gz
+*.bak
+*~
+
+# IDEs
+.vscode/
+.idea/
+
+# Python env files
+Pipfile.lock
+
+# local secrets
+.env
+
+# dataset backups
+data/*.bak

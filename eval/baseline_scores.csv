@@ -1,0 +1,2 @@
+filename,raw_output_first_50_chars,is_valid_json,has_all_required_keys,key_accuracy,value_accuracy,notes
+document_001.txt,<raw model response copied verbatim> ```  (Placeho,FALSE,FALSE,0.00,0.00,parse_error: Expecting value: line 1 column 1 (char 0)
