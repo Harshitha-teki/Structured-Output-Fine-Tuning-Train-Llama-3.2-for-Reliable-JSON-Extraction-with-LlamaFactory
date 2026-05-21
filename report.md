@@ -38,4 +38,27 @@ Fine-tuning with LoRA addresses these limitations by updating model parameters t
 
 ---
 
+## Capturing training screenshots (quick guide)
+
+When you run the fine-tune in LlamaFactory, capture two screenshots:
+
+- training configuration: the UI screen where you set LoRA hyperparameters, batch size, learning rate, and dataset path. Save it as training_config.png.
+- loss curve: the training progress / loss plot shown during or after training. Save it as loss_curve.png.
+
+Recommended steps:
+
+1. Run the fine-tune in LlamaFactory with the parameters in `training_config.md`.
+2. When the configuration screen is visible, take a screenshot and save it temporarily on your machine.
+3. When training starts or completes, open the training monitoring page and take a screenshot of the loss/metrics plot.
+4. Run the helper script to copy, commit, and push the screenshots to GitHub (PowerShell):
+
+```powershell
+cd 'C:\Users\Harshitha\Downloads\Train Llama 3.2'
+.
+\scripts\update_screenshots_and_push.ps1 -ConfigImagePath 'C:\path\to\training_config.png' -LossImagePath 'C:\path\to\loss_curve.png'
+```
+
+The script will copy the images into `screenshots/`, commit them with a timestamped message, and push to `origin/main`.
+
+
 Files and directories of interest: `schema/`, `data/`, `eval/`, `prompts/`, `training_config.md`, `report.md`
